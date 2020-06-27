@@ -98,7 +98,7 @@ function handler() {
 }
 
 function buscar(e) {
-  var url = `https://www.googleapis.com/customsearch/v1?key=AIzaSyCMIhir8Ccx9kT-ZacjLHkqs33R4YLn6fM&cx=005438347368936070682:avdruws81j6&q="${
+  var url = `https://www.googleapis.com/customsearch/v1?key=YOUR-GOOGLE-API-KEY&q="${
     input.value
   }"hallada muerta`;
   fetch(url)
