@@ -1,0 +1,262 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* .bg{
+  background-image: linear-gradient(65deg, #2c0e53 0%, #3f285e 100%);
+} */
+body {
+  background-image: linear-gradient(90deg, #270652 0%, #3f285e 100%);
+
+  /* background-color: #3f285e; */
+  color: white;
+  font-family: "Roboto", sans-serif;
+  height: 100vh;
+}
+h1 {
+  color: #d10cc7;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.wrapper p {
+  font-size: 1.3em;
+}
+.search {
+  width: 30%;
+  height: 2em;
+  /*  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;*/
+  display: flex;
+  align-items: center;
+}
+.wrapper.top {
+  height: auto;
+  align-items: center;
+  justify-content: flex-start;
+}
+.info {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.info,
+.estadistica {
+  width: 80%;
+  text-align: center;
+}
+.wrapper .estadistica {
+  display: flex;
+  justify-content: center;
+}
+.wrapper .resaltado {
+  font-size: 1.5em;
+  color: #d10cc7;
+}
+/* .center {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+} */
+.search {
+  padding: 2em;
+}
+.search input.format {
+  text-transform: uppercase;
+  border-bottom: 0;
+}
+.search input {
+  color: white;
+  font-size: 2em;
+  width: 100%;
+  font-weight: 700;
+  line-height: 50px;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  border-bottom: 4px solid rgba(255, 255, 255, 0.8);
+}
+.search-button {
+  cursor: pointer;
+}
+.search input:focus {
+  outline: 0;
+}
+.content {
+  padding: 60px;
+  display: grid;
+  /* gap: 10px; */
+  grid-template-columns: repeat(3, minmax(280px, 1fr));
+  /* background-image: linear-gradient(0deg, #2c0e53 0%, #4d3270 100%); */
+}
+.content b {
+  text-transform: uppercase;
+  color: white;
+}
+.oculto {
+  display: none;
+}
+article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+article p {
+  color: #d10cc7;
+}
+article figure,
+article figure img {
+  width: 100%;
+}
+article figure img {
+  border: 3px solid rgba(0, 0, 0, 0.3);
+  /* border-inline: 3px solid rgba(0, 0, 0, 1); */
+  filter: grayscale(100%);
+}
+article figure img:hover {
+  filter: unset;
+}
+article .mas {
+  /* align-self: flex-end; */
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+article .mas a {
+  color: white;
+  text-decoration: none;
+  font-style: italic;
+}
+article .mas a:hover,
+article .mas h4:hover {
+  color: #d10cc7;
+  border-bottom: 2px solid white;
+}
+article .social {
+  display: flex;
+  flex-direction: column;
+}
+article.informacion {
+  justify-content: space-around;
+}
+.novisible {
+  opacity: 0;
+}
+.icon {
+  height: 30px;
+  padding-right: 1em;
+}
+.icon-hashtag {
+  opacity: 1;
+  font-size: 50px;
+  font-weight: bold;
+}
+.icon .visible {
+  opacity: 1;
+}
+article .hash {
+  color: #d10cc7;
+  font-size: 2em;
+}
+@media (max-width: 1500px) {
+  .search input {
+    font-size: 1.7em;
+  }
+  .content {
+    padding: 40px;
+  }
+  .search {
+    width: 50%;
+  }
+}
+@media (max-width: 1000px) {
+  .content {
+    padding: 30px;
+    /* gap: 10px; */
+    grid-template-columns: repeat(2, minmax(280px, 1fr));
+  }
+}
+@media (max-width: 700px) {
+  .search {
+    width: 80%;
+  }
+  .search input,
+  .icon-hashtag {
+    font-size: 1.5em;
+  }
+  .content {
+    padding: 20px;
+    grid-template-columns: minmax(300px, 1fr);
+  }
+}
+::-webkit-input-placeholder {
+  color: #d10cc7;
+}
+
+:-moz-placeholder {
+  /* Firefox 18- */
+  color: #d10cc7;
+}
+
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #d10cc7;
+}
+
+:-ms-input-placeholder {
+  color: #d10cc7;
+}
+
+.mensaje {
+  position: absolute;
+  right: 1em;
+  width: 1.5em;
+  z-index: 1;
+  padding: 1em;
+}
+.mensaje a {
+  color: white;
+}
+.mensaje a:hover {
+  color: #d10cc7;
+}
+.hash:nth-child(even) {
+  color: #fff;
+  padding: 10px 0;
+}
+.advertencia {
+  color: white;
+  background-color: #da3227;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #c53a30;
+}
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: #990a00;
+}
